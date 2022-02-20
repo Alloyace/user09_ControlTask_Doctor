@@ -1,0 +1,29 @@
+﻿<Window x:Class="HospitalApp.UI.TicketWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HospitalApp.UI"
+        mc:Ignorable="d"
+        Title="Талон" Height="400" Width="400" ResizeMode="NoResize">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+        </Grid.RowDefinitions>
+        <FlowDocumentScrollViewer Name="scrollAllData"  Grid.Row="0" Visibility="Visible" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+            <FlowDocument Name="ticketDocument" ColumnWidth="700" MinPageHeight="1000" FontFamily="Roboto">
+                <BlockUIContainer>
+                    <StackPanel Orientation="Vertical"  Name="stackTicket">
+                        <TextBlock FontSize="20" x:Name="txtBlockDoctor"></TextBlock>
+                        <TextBlock FontSize="20" x:Name="txtBlockDate"></TextBlock>
+                        <TextBlock FontSize="20" x:Name="txtBlockCabinet"></TextBlock>
+                    </StackPanel>
+                </BlockUIContainer>
+            </FlowDocument>
+        </FlowDocumentScrollViewer>
+        <Button x:Name="BtnPring" Content="Печать" Grid.Row="1" Click="BtnPring_Click" ></Button>
+    </Grid>
+    
+    
+</Window>
